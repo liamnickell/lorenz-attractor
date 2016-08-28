@@ -18,11 +18,10 @@ def get_values(x, y, z, sigma=10.0, rho=28.0, beta=8.0/3.0, time=0.01):
 	return x_point, y_point, z_point
 
 
-def generate_points():
-	num_of_points = 9000
+def generate_points(points=9000):
 	xs, ys, zs = [0.0], [1.0], [1.05]
 
-	for i in range(num_of_points):
+	for i in range(points):
 		new_x, new_y, new_z = get_values(xs[i], ys[i], zs[i])
 		xs.append(xs[i] + new_x)
 		ys.append(ys[i] + new_y)
