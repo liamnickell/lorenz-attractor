@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
 
+# Change the values of sigma, rho, and/or beta (and/or time) in the default param value or function
+# call to manipulate the appearance of the Lorenz Attractor
 def get_values(x, y, z, sigma=10.0, rho=28.0, beta=8.0/3.0, time=0.01):
 	x_point = time * (sigma * (y - x))
 	y_point = time * (x * (rho - z) - y)
@@ -18,6 +20,7 @@ def get_values(x, y, z, sigma=10.0, rho=28.0, beta=8.0/3.0, time=0.01):
 	return x_point, y_point, z_point
 
 
+# The higher the value of points, the more points are graphed (and vice versa)
 def generate_points(points=9000):
 	xs, ys, zs = [0.0], [1.0], [1.05]
 
