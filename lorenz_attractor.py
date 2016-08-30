@@ -34,7 +34,9 @@ def main():
 	xs, ys, zs = generate_points()
 
 	fig = plt.figure()
-	ax = fig.gca(projection='3d')
+	ax = fig.add_subplot(111, projection='3d')
+	ax.grid(False) # Change to True to show grid lines
+	plt.axis('on') # Change to 'off' to turn off axes
 
 	ax.plot(xs, ys, zs)
 	ax.set_title("Lorenz Attractor")
